@@ -31,6 +31,10 @@ These libraries are required to run the notebook code:
 * `rdkit`
 * `scikit-learn`
 
+## Todo
+
+- [ ] `Layer` parameters are not FFN registerested params, so `model.eval()`, and `model.train()` won't have any effect.       
+
 
 ACKNOWLEDGMENTS
 ===============
