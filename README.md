@@ -5,19 +5,18 @@
 
 DESCRIPTION
 ===========
-This research project tests if [The Forward-Forward Algorithm](https://www.cs.toronto.edu/~hinton/FFA13.pdf) can be used for the Virtual High-Througput Screening (VHTS), and DRD2 target in particular.            
+This research project tests if [The Forward-Forward Algorithm](https://www.cs.toronto.edu/~hinton/FFA13.pdf) can be used for the Virtual High-Throughput Screening (VHTS), with the Dopamine receptor D2 (DRD2) protein target in particular.            
 
-
-To train the model, the positive-negative pairs are created by sampling from the training set measurements, randomly matching active and inactive compounds. During FFA training, the network enhances the activity of the neurons for the positive examples, and attenuates the signal for the negative data-points. At the inference time, the `goodness score` is used as a proxy for activity score -- the absolute value of this score is not relevant for the ranking problems, like VHTS.   
+To train the model, the positive-negative pairs are created by sampling from the training set measurements by randomly matching active and inactive compounds. During FFA training, the network enhances the activity of the neurons for the positive examples and attenuates the signal for the negative data-points. At inference time, the `goodness score` is used as a proxy for the activity score -- the absolute value of this score is not relevant for the performance on ranking problems, such as VHTS.   
 
 
 RESULTS   
 =======
 
-The Simple Feed-Forward Dense networks quickly converge to the previously reported performance at the value ROC-AUC=95-95%.           
-Surprisinly the `ForwardForwardNet` outperforms that base-line rather easy reaching the performance at the level of ROC-AUC=98%.
+The Simple Feed-Forward Dense networks quickly converge to the previously reported performance at the ROC-AUC value around 95-96%.           
+Surprisingly, the `ForwardForwardNet` outperforms that baseline rather easily reaching the performance at the level of ROC-AUC around 98%.
 
-For the full code and a notebook, check [here](https://github.com/pgniewko/ff_dd/blob/main/FF_DD.ipynb).
+For the full code and more results, check [here](https://github.com/pgniewko/forward_forward_vhts/blob/main/ForwardForwardNet.ipynb).
 
 ![Shells](./assets/results.png)
 
