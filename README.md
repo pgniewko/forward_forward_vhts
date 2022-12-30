@@ -33,7 +33,9 @@ These libraries are required to run the notebook code:
 
 ## Todo
 
-- [ ] `Layer` parameters are not FFN registerested params, so `model.eval()`, and `model.train()` won't have any effect.       
+- [ ] Allow more flexible activation functions
+- [ ] Add other goodness functions (including proper normalization).
+- [ ] Add HIV benchmark from TDCommons HTS benchmarks
 
 
 ACKNOWLEDGMENTS
